@@ -1,22 +1,28 @@
 # This is the default format.
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title
+#permalink: /:categories/:year/:month/:day/:title
+permalink: /:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
-pygments: true
+pygments: false
+markdown: rdiscount
+paginate: 6
+description_length: 200
 
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : 涵曦博客
-tagline: Site Tagline
+title : 涵曦的博客
+address: hanxi.github.io
+tagline: 分享编程的点滴
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
+  name : 涵曦
+  email : hanxi.com@gmail.com
+  github : hanxi
   twitter : username
   feedburner : feedname
+start_year: "2013"
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -26,12 +32,12 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.com
+production_url : http://hanxi.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
-  version : 0.3.0
+  version : 0.2.13
 
   # All links will be namespaced by BASE_PATH if defined.
   # Links in your website should always be prefixed with {{BASE_PATH}}
@@ -68,13 +74,11 @@ JB :
   ASSET_PATH : false
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
-  # Some JB helpers refer to these paths; change them here if needed.
+  # Some JB helpers refer to these paths; change theme here if needed.
   #
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
-  atom_path : /atom.xml
-  rss_path : /rss.xml
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -83,7 +87,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : evcblog
     livefyre :
       site_id : 123
     intensedebate :
@@ -101,7 +105,7 @@ JB :
   analytics :
     provider : google
     google :
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-34056607-1'
     getclicky :
       site_id :
     mixpanel :
