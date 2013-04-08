@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Messages"
+title: "留言板"
 tagline: ""
 description: ""
 group: "navigation"

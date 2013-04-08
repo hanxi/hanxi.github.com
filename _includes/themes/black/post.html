@@ -9,7 +9,7 @@
         {{ content }}
       </div>
     </div>
-    
+
     <div class="main-container">
       <div class="mainbody">
         {% include ever/share %}
@@ -53,13 +53,13 @@
         </script>
       </div>
     </div>
-    
+
   </div>
-  
-  <div class="span3">
+
+  <div class="span4">
     <div class="side-container">
       <div class="sidebar">
-        <h4>Published</h4>
+        <h4>发布时间</h4>
         <div class="date"><span>{{ page.date | date: "%Y-%m-%d" }}</span></div>
       </div>
     </div>
@@ -67,13 +67,20 @@
     <div class="side-container">
       <div class="sidebar">
         {% unless page.tags == empty %}
-          <h4>Tags</h4>
+          <h4>标签</h4>
           <ul class="tag_box">
           {% assign tags_list = page.tags %}
           {% include JB/tags_list %}
           </ul>
-        {% endunless %}        
+        {% endunless %}
       </div>
     </div>
+
+    <div class="side-container">
+      <div class="sidebar">
+          <iframe frameborder="0" scrolling="no" src="http://show.v.t.qq.com/index.php?c=show&a=index&n=hanxi1203&w=0&h=352&fl=1&l=30&o=21&co=0" width="100%" height="352"></iframe>
+      </div>
+    </div>
+
   </div>
 </div>

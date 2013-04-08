@@ -1,21 +1,21 @@
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html lang="zh-ch" xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
 <head>
   <title>{{ page.title }}{% if page.title != site.title %} | {{ site.title }}{% endif %}</title>
   {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
   <meta name="author" content="{{ site.author.name }}" />
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
-  
+
   <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Google Prettify -->
   <link href="{{ ASSET_PATH }}/google-code-prettify/desert.css" rel="stylesheet" type="text/css" media="all">
   <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-  
+
 <!-- Google Pretty end -->
 
   <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all" />
-  
+
   <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
 </head>
 
@@ -24,11 +24,12 @@
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="{{ HOME_PATH }}">{{ site.address }}</a>
+        <a class="brand" href="{{ HOME_PATH }}">{{site.address}}</a>
         <ul class="nav">
-          <li><a href="/archive.html">Archive</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/messages.html">Messages</a></li>
+          <li><a href="/archive.html">归档</a></li>
+          <li><a href="/categories.html">分类</a></li>
+          <li><a href="/messages.html">留言</a></li>
+          <li><a href="/about.html">关于</a></li>
         </ul>
         <ul class="pull-right">
           <li>
@@ -38,8 +39,8 @@
               <input type="hidden" name="ie" value="UTF-8" />
               <input type="hidden" name="oe" value="UTF-8" />
               <input type="hidden" name="hl" value="zh-CN" />
-              <input type="hidden" name="domains" value="http://EverCoding.net/" />
-              <input type="hidden" name="sitesearch" value="http://EverCoding.net/" />
+              <input type="hidden" name="domains" value="http://hanxi.github.io/" />
+              <input type="hidden" name="sitesearch" value="http://hanxi.github.io/" />
             </form>
           </li>
         </ul>
@@ -66,7 +67,7 @@
         </script>
       </footer>
   </div>
-  
+
   <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
   <script type="text/javascript">
@@ -75,7 +76,7 @@
       $('a[href^="http"]').each(function () {
         $(this).attr('target', '_blank');
       });
-      
+
       $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
       window.prettyPrint && prettyPrint();
 

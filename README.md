@@ -1,8 +1,7 @@
-# EverCoding.net
+# 涵曦的博客
 
 A static blog built with [Jekyll-BootStrap][] on github pages
-
-**EverCoding.net** is my domain.
+the black theme from [evercoding][]
 
 ## Function that has been realized
 
@@ -27,11 +26,12 @@ A static blog built with [Jekyll-BootStrap][] on github pages
 
 ---
 
-With this blog, I will write something about programming, programmers and some of my life  
+With this blog, I will write something about programming, programmers and some of my life
 I hope I would not give up updating this blog
 
-**Always not be fickle in a fickle society!**  
+**Always not be fickle in a fickle society!**
 **Having Dream, Heart Live**
 
+[evercoding]: http://evercoding.net/
 [Jekyll-BootStrap]: http://jekyllbootstrap.com
 [Skydark's blog]: http://blog.skydark.info
