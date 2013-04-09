@@ -29,18 +29,18 @@ body {
     padding-right: 20px;
     /*padding: auto 20px;*/
 
-    border-radius: 10px;
+    /*border-radius: 10px;
     -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
+    -moz-border-radius: 10px;*/
 }
 
 .main-container {
     background-color: #E4E4E4;
     margin-bottom: 10px;
 
-    border-radius: 10px;
+    /*border-radius: 10px;
     -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
+    -moz-border-radius: 10px;*/
 }
 
 .mainbody {
@@ -52,9 +52,9 @@ body {
     background-color: #E4E4E4;
     margin-bottom: 10px;
 
-    border-radius: 10px;
+    /*border-radius: 10px;
     -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
+    -moz-border-radius: 10px;*/
 }
 
 .sidebar {
@@ -87,10 +87,10 @@ footer {
     margin: 3px;
     background-color: #ccc;
 
-    border-radius: 2px;
+    /*border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    text-decoration: none;
+    text-decoration: none;*/
     /*color: #555;*/
 }
 
