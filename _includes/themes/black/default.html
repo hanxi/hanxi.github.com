@@ -16,7 +16,7 @@
 
   <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all" />
 
-  <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+v <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
 </head>
 
 <body>
@@ -111,7 +111,7 @@
         var count = traverse($(this), 0, {{ site.description_length }});
         if (count > {{ site.description_length }}) {
           var thisUrl = $(this).siblings().first().children().attr('href');
-          $(this).after('\n<a href="' + thisUrl + '" rel="nofollow">' + '阅读全部</a>');
+          $(this).after('\n<a href="' + thisUrl + '" rel="nofollow">' + '阅读全部</a>'+ '<a href="javascript:void(0);" style="float:right" onclick="window.scrollTo(0, 0);">返回顶部</a>');
         }
       });
     });
