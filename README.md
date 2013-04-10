@@ -1,7 +1,7 @@
 # 涵曦的博客
 
 A static blog built with [Jekyll-BootStrap][] on github pages
-the black theme from [evercoding][]
+<br>the black theme from [evercoding][]
 
 ## Function that has been realized
 
