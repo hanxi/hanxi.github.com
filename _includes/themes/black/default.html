@@ -10,13 +10,12 @@
 
   <!-- Google Prettify -->
   <link href="{{ ASSET_PATH }}/google-code-prettify/desert.css" rel="stylesheet" type="text/css" media="all">
-  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-
-<!-- Google Pretty end -->
+  <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
+  <!-- Google Pretty end -->
 
   <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all" />
 
-v <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
 </head>
 
 <body>
@@ -68,8 +67,6 @@ v <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
       </footer>
   </div>
 
-  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
   <script type="text/javascript">
     $(function() {
 
@@ -77,8 +74,7 @@ v <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
         $(this).attr('target', '_blank');
       });
 
-      $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
-      window.prettyPrint && prettyPrint();
+      window.prettyPrint() && prettyPrint();
 
       function traverse($node, len, maxCount) {
         var reachMaxCount = len > maxCount;
