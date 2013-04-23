@@ -62,11 +62,11 @@ links:
 
     <div class="side-container">
       <div class="sidebar">
-        {% unless site.tags == empty %}
-        <h3>标签</h3>
-        <ul class="inline tag_box">
-        {% assign tags_list = site.tags %}
-        {% include JB/tags_list %}
+        {% unless site.categories == empty %}
+        <h3>分类</h3>
+        <ul class="tag_box">
+        {% assign categories_list = site.categories %}
+        {% include JB/categories_list %}
         </ul>
         {% endunless %}
       </div>

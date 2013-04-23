@@ -4,6 +4,7 @@ title: "[转载]编译Linux内核"
 tagline: "Compiling Linux Kernel"
 description: "Linux内核编译的步骤以及一些相关问题的解决办法"
 tags: ["Linux", "内核", "编译源码"]
+categories: ["技术"]
 ---
 {% include JB/setup %}
 

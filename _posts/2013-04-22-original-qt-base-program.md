@@ -4,6 +4,7 @@ title: "[原创]Qt基本编程"
 tagline: "Qt base program"
 description: "介绍基本的qt编程入门，包括如何使用qt助手，使用cmake编译工程"
 tags: ["Qt", "入门教程", "Linux"]
+categories: ["技术"]
 ---
 {% include JB/setup %}
 
