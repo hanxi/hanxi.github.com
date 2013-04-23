@@ -3,7 +3,7 @@ layout: post
 title: "[原创]Qt基本编程"
 tagline: "Qt base program"
 description: "介绍基本的qt编程入门，包括如何使用qt助手，使用cmake编译工程"
-tags: ["Qt", "内核", "编译源码"]
+tags: ["Qt", "入门教程", "Linux"]
 ---
 {% include JB/setup %}
 
@@ -19,20 +19,35 @@ $ sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer
 <pre class="prettyprint lang-cpp">
 #include &lt;QSqlDatabase>
 </pre>
-需要用到mysql数据库需要执行下面命令(自带sqlite驱动),
+需要用到mysql数据库需要执行下面命令安装(自带sqlite驱动),
 <pre class="prettyprint lang-bsh">
 $ sudo apt-get install libqt4-sql-mysql
 </pre>
 
 ###来一个helloworld程序
-1.  建立工程目录：我的目录在/home/hanxi/tmp/
+* 建立工程目录：我的目录在/home/hanxi/tmp/
 <pre class="prettyprint lang-bsh">
 $ mkdir -p helloworld/src helloworld/ui helloworld/build helloworld/bin
+$ touch helloworld/src/main.cpp helloworld/src/mainwindowimpl.h helloworld/src/mainwindowimpl.cpp
 </pre>
 
-2.  打开qt designer（qt 设计器），新建一个helloworld.ui文件。（菜单：文件->新建，弹出新建窗体对话框，点击创建，保存为helloworld/ui/helloworld.ui）
+* 打开qt designer（qt 设计器），新建一个helloworld.ui文件。（菜单：文件->新建，弹出新建窗体对话框，点击创建，保存为helloworld/ui/helloworld.ui）。
+生成后的目录格式是这样的
+<pre class="prettyprint lang-bsh">
+helloworld
+├── bin
+│   └── helloworld
+├── build
+├── CMakeLists.txt
+├── src
+│   ├── main.cpp
+│   ├── mainwindowimpl.cpp
+│   └── mainwindowimpl.h
+└── ui
+    └── helloworld.ui
+</pre>
 
-3.  建立src/main.cpp
+* 编辑src/main.cpp
 <pre class="prettyprint lang-cpp">
 #include &lt;QApplication>
 #include "mainwindowimpl.h"
@@ -50,7 +65,7 @@ int main(int argc, char ** argv)
 </pre>
 
 
-4.  建立src/mianwindowimpl.h
+* 编辑src/mianwindowimpl.h
 <pre class="prettyprint lang-cpp">
 #ifndef MAINWINDOWIMPL_H
 #define MAINWINDOWIMPL_H
@@ -68,7 +83,7 @@ public:
 #endif
 </pre>
 
-5.  建立src/MainWindowImpl.cpp
+* 编辑src/MainWindowImpl.cpp
 <pre class="prettyprint lang-cpp">
 #include "mainwindowimpl.h"
 
@@ -80,8 +95,8 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 </pre>
 
 
-6.  建立helloworld/CMakeLists.txt
-<pre class="prettyprint lang-bsh">
+* 编辑helloworld/CMakeLists.txt
+<pre class="prettyprint linenums lang-bsh">
 PROJECT(helloworld)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 FIND_PACKAGE(Qt4 REQUIRED)
@@ -129,11 +144,14 @@ add_executable(helloworld
 target_link_libraries(helloworld ${QT_LIBRARIES})
 </pre>
 
-7.  进入build目录，执行
+* 进入build目录，执行
 <pre class="prettyprint lang-bsh">
 $ cmake ..
 $ make
 $ ../bin/helloworld
 </pre>
 
+***
+未完待续...
+(还会继续添加如何使用qt助手来帮助自己快速编程，因为我个人不需要深入学习qt，只是用来实现一个客户端)
 
