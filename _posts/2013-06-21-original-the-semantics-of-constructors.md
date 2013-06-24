@@ -3,7 +3,7 @@ layout: post
 title: "[原创]构造函数的语意"
 tagline: "The Semantics of Constructors"
 description: "编译器在何时自动合成构造函数？成员初始化，NRV"
-tags: ["C++", "对象模型", "读书笔记","NRV"]
+tags: ["C++", "对象模型", "读书笔记", " NRV "]
 categories: ["技术"]
 ---
 {% include JB/setup %}
