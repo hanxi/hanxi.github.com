@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DATE=$(date +%Y-%m-%d)
 #echo $DATE
 
@@ -19,8 +21,11 @@ then
     echo "translate"
 fi
 
-name=$name$2
-mv $2 $name
+filestr='---\nlayout: post\ntitle: ""\ntagline: ""\ndescription: ""\ntags: ["", ""]\ncategories: [""]\n---\n{% include JB/setup %}\n\n'
 
+name=$name$2
+echo $name
+touch $name
+echo -e $filestr>$name
 echo "生成："$name
 
