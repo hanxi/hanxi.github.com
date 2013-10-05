@@ -62,6 +62,8 @@ HXGame
         └── tolua++.bin
 </pre>
 
+项目地址: [使用cocos2dx引擎为基础完成一个手机游戏的基本框架][]
+
 HXModules文件夹自己主要需要完成的模块,包括手游中需要完成的通用代码都在此以模块的方式实现.其中HXLuaModules.cpp是tolua++生成的文件. 现在只实现了一个功能,执行lua脚本和重启lua脚本(在lua中可以重启lua脚本).
 
 libs文件夹是从cocos2dx工程拷贝过来的,减去了不需要的文件,里面的工程文件也做了修改(现在完成了安卓工程和linux的编译和运行).
@@ -83,3 +85,4 @@ tools文件夹中的tolua++用来生成luabing文件...
 <img src="/assets/media/2013-09-30-original-cocos2dx-game-frame.1.jpg" alt="Sanjose" class="img-center">
 
 [关中刀客]:http://guan-zhong-dao-ke.blog.163.com/blog/static/465446372012031114657379/
+[使用cocos2dx引擎为基础完成一个手机游戏的基本框架]:https://github.com/hanxi/HXGame
