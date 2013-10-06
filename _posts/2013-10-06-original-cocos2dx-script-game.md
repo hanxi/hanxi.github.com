@@ -63,7 +63,37 @@ HXGameScene.lua就是游戏的主场景了.包含创建场景,各种游戏操作
 ####游戏后续补充
 现在这个游戏只是能玩,有个分数在那里显示着,但还不像个游戏.后面我给他添加闯关模式,无尽模式什么的...在玩法上添加点东西,比如最高记录保存.
 
+####顺便添加一点apk打包知识
+无需安装eclipse,只需要ant就足矣.
+
+* 生成keystore文件
+<pre class="prettyprint lang-bsh">
+keytool -genkey -alias hanxigame.keystore -keyalg RSA -keystore hanxigame.keystore
+</pre>
+
+* 修改ant.properties文件
+
+<pre class="prettyprint lang-bsh">
+key.store=./hanxigame.keystore
+key.alias=hanxigame.keystore
+key.store.password=hanxigame
+key.alias.password=hanxigame
+</pre>
+
+* 执行ant release
+
+* 如果出现环境变量问题,需要把一些必要的环境变量设置好.ant需要用到NDK_ROOT这个变量
+<pre class="prettyprint lang-bsh">
+#set android environment
+export ANDROID_SDK_ROOT=/home/hanxi/Lib/android-sdk
+export NDK_ROOT=/home/hanxi/Lib/android-ndk
+export COCOS2DX_ROOT=/home/hanxi/Lib/cocos2d-x
+export PATH=$PATH:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/tools
+export PATH=$PATH:$NDK_ROOT
+</pre>
+
+* 这个游戏第一版就这样子结束吧,编译一个release包放到百度网盘里面了.可以下载玩玩的.自适应屏幕的(具体怎么适应可去网上找资料,或者直接阅读我的代码). [安卓安装包下载地址]
 
 [使用cocos2dx引擎为基础完成一个手机游戏的基本框架]:https://github.com/hanxi/HXGame
 [crosslife]:https://github.com/crosslife/LoveClear
-
+[安卓安装包下载地址]:http://pan.baidu.com/s/1bywbw
