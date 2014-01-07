@@ -37,13 +37,13 @@ $ touch helloworld/src/main.cpp helloworld/src/mainwindowimpl.h helloworld/src/m
 <pre class="prettyprint lang-bsh">
 helloworld
 ├── bin
-│   └── helloworld
+│   └── helloworld
 ├── build
 ├── CMakeLists.txt
 ├── src
-│   ├── main.cpp
-│   ├── mainwindowimpl.cpp
-│   └── mainwindowimpl.h
+│   ├── main.cpp
+│   ├── mainwindowimpl.cpp
+│   └── mainwindowimpl.h
 └── ui
     └── helloworld.ui
 </pre>
