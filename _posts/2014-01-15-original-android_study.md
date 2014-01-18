@@ -75,11 +75,11 @@ SpannableStringBuild用于经常变动的字符串，SpannableString则用于不
     &lt;/application>
 </pre>
 
-#### 跳转动画 ： TODO
-
 ## 3. luajava的使用
 
-    为了在安卓上解释lua，采用了现成的luajava库，编译luajava可以参考 [集成Lua到你的Android游戏](http://www.cnblogs.com/astin/archive/2011/07/26/2117590.html)。luajava.h可以使用javah生成。后台我找到了现成[AndroLua](https://github.com/mkottman/AndroLua)。直接把它集成到我的项目中的了。
+为了在安卓上解释lua，采用了现成的luajava库，编译luajava可以参考<http://www.cnblogs.com/astin/archive/2011/07/26/2117590.html>。
+    
+luajava.h可以使用javah生成。后台我找到了现成[AndroLua](https://github.com/mkottman/AndroLua)。直接把它集成到我的项目中的了。
     
 <pre class="prettyprint lang-java">
     import org.keplerproject.luajava.*;
@@ -96,9 +96,9 @@ SpannableStringBuild用于经常变动的字符串，SpannableString则用于不
 
 ## 4. WebView的使用
 
-    最初以为高亮代码很难自己实现，就试着找现成的源码，结果没找到。就想着看看有没有js实现的代码编辑器，后面找到了一个不错的[codemirror](https://github.com/marijnh/CodeMirror)。并且集成到我的项目中在android4.0以上设备显示还不错，但是在2.3的设备上不能滑动（webview不支持div的滑动），底层的硬伤，试过修改codemirror和使用iscroll都没搞定，最后才找到jota（2年前见过这玩意，用过一两次没注意到它是开源的），然后研究它的源代码，就有了现在的高亮了。
+最初以为高亮代码很难自己实现，就试着找现成的源码，结果没找到。就想着看看有没有js实现的代码编辑器，后面找到了一个不错的[codemirror](https://github.com/marijnh/CodeMirror)。并且集成到我的项目中在android4.0以上设备显示还不错，但是在2.3的设备上不能滑动（webview不支持div的滑动），底层的硬伤，试过修改codemirror和使用iscroll都没搞定，最后才找到jota（2年前见过这玩意，用过一两次没注意到它是开源的），然后研究它的源代码，就有了现在的高亮了。
 
-    WebView控件很简单的。js和java交互网上也找到很多教程[](http://blog.csdn.net/wangtingshuai/article/details/8631835)。
+WebView控件很简单的。js和java交互网上也找到很多教程[js和java交互](http://blog.csdn.net/wangtingshuai/article/details/8631835)。
     
 <pre class="prettyprint lang-java">
     WebView webView = new WebView(this); 
@@ -111,11 +111,11 @@ SpannableStringBuild用于经常变动的字符串，SpannableString则用于不
 
 ## 5. 文件浏览
 
-    这个功能一开始就不打算自己实现，现在开发安卓的这么多，一定能找到这种源码，结果一下子就找到了现成的文件选择对话框[Android开发 打开文件 选择文件对话框](http://blog.csdn.net/trbbadboy/article/details/7899424)。已经集成到我的项目中了，我还模仿它完成了保存文件对话框的功能。
+这个功能一开始就不打算自己实现，现在开发安卓的这么多，一定能找到这种源码，结果一下子就找到了现成的文件选择对话框[Android开发 打开文件 选择文件对话框](http://blog.csdn.net/trbbadboy/article/details/7899424)。已经集成到我的项目中了，我还模仿它完成了保存文件对话框的功能。
     
-    实现保存文件对话框的时候难点就在于如何在静态的layout中添加动态的layout，[android: 静态XML和动态加载XML混合使用，以及重写Layout控件](http://blog.csdn.net/lzx_bupt/article/details/5600187) 这篇文章对我帮助挺大的。
+实现保存文件对话框的时候难点就在于如何在静态的layout中添加动态的layout，[android: 静态XML和动态加载XML混合使用，以及重写Layout控件](http://blog.csdn.net/lzx_bupt/article/details/5600187) 这篇文章对我帮助挺大的。
     
-    封装静态的layout，其中预留动态layout的位置，方便添加动态layout的时候整理布局不变。
+封装静态的layout，其中预留动态layout的位置，方便添加动态layout的时候整理布局不变。
     
 <pre class="prettyprint lang-java">
         static public class SaveDialogLayout extends LinearLayout{ 
@@ -136,10 +136,29 @@ SpannableStringBuild用于经常变动的字符串，SpannableString则用于不
         }    
 </pre>
 
-### TODO:
+## 6. 添加设置
+    
+android提供了PreferenceActivity，所以添加设置是比较简单的。
+    
+<pre class="prettyprint lang-java">
+    public class SetActivity extends PreferenceActivity {
+    	@Override
+    	public void onCreate(Bundle savedInstanceState) {
+    		super.onCreate(savedInstanceState);
+    		SysApplication.getInstance().addActivity(this); 
+    
+    		addPreferencesFromResource(R.xml.preferences);
+    	}
+    }
+</pre>
 
-6. 添加设置
+具体preferences.xml是什么样子的就参考代码吧。
+    
 
-7. 添加广告
+## 7. 添加广告
 
-8. 优化界面
+我使用了有米广告，查看它的[sdk文档](http://www.youmi.net/sdk/android/406/doc/doc.html?201306250000)就能搞定，非常简单的。我这里模拟器运行广告报错，但是实体机没问题。
+
+## 8. 优化界面
+
+最初一直再想去找别的应用中的ui元素，但是直接拿过来又有一堆的不搭配。最后找到了官方的ui编辑工具，超好用。网址：<http://android-ui-utils.googlecode.com/hg/asset-studio/dist/index.html>
