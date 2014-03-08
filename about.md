@@ -14,6 +14,7 @@ group: "navigation"
 
 #### 我的网名？
 * 涵曦 or hanxi
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=785446153&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:785446153:51" alt="点击这里QQ联系我" title="点击这里QQ联系我"/></a>
 * 由于有些网站已被注册，一般也选用：明涵曦 or minghanxi or 涵曦来临
 
 
