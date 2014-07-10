@@ -11,6 +11,8 @@ categories: ["技术"]
 直接贴图和下载地址:
 
 应用宝：<http://android.myapp.com/myapp/detail.htm?apkName=com.hanxi.runtodie>
+豌豆荚：<http://www.wandoujia.com/apps/com.hanxi.runtodie>
+百度手机助手：<http://as.baidu.com/a/item?docid=6678809>
 
 <img src="/assets/media/runtodie1.png" alt="Sanjose" class="img-center">
 <img src="/assets/media/runtodie2.png" alt="Sanjose" class="img-center">
