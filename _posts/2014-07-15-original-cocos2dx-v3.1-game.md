@@ -8,7 +8,6 @@ categories: ["技术","游戏"]
 ---
 {% include JB/setup %}
 
-[原创]使用cocos2d-x v3.1开发小游戏（基本框架）
 
 ## 小游戏的组成
 
